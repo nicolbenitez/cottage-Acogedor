@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cottage Acogedor</title>
+
+  <style>
+    /* ----- ESTILOS GENERALES ----- */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fdf6f0, #fcefee);
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px 10px;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 10px;
+      color: #7b4b94; /* Lila suave */
+    }
+
+    p {
+      max-width: 600px;
+      margin: 10px auto 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* ----- BOTÓN DE CONTACTO ----- */
+    .boton-contacto {
+      background-color: #e6b800; /* Dorado */
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .boton-contacto:hover {
+      background-color: #c39b00;
+      transform: scale(1.05);
+    }
+
+    /* ----- SECCIÓN DE PRODUCTOS ----- */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .producto h3 {
+      color: #7b4b94;
+      margin: 10px 0 5px;
+    }
+
+    /* ----- PIE DE PÁGINA ----- */
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* ----- ADAPTACIÓN A CELULARES ----- */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .producto {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- Aquí irá el logo generado -->
+    <img src="logo-cottage.png" alt="Logo Cottage Acogedor">
+    <h1>Cottage Acogedor</h1>
+    <p>Un rincón lleno de encanto donde encontrarás productos hechos con amor para tu hogar.</p>
+    <button class="boton-contacto">Contáctanos</button>
+  </header>
+
+  <section class="productos">
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Decoración artesanal">
+      <h3>Decoración artesanal</h3>
+      <p>Detalles únicos para hacer tu casa más acogedora.</p>
+    </div>
+
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1602526216037-b3c95ff04b32" alt="Velas aromáticas">
+      <h3>Velas aromáticas</h3>
+      <p>Relaja tus sentidos con aromas cálidos y suaves.</p>
+    </div>
+
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1629389289050-5b17c1fd3e68" alt="Cojines decorativos">
+      <h3>Cojines decorativos</h3>
+      <p>Texturas y colores que llenan de vida tu espacio.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Cottage Acogedor · Todos los derechos reservados
+  </footer>
+</body>
+</html>
