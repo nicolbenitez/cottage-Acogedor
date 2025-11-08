@@ -6,15 +6,12 @@
   <title>Cottage Acogedor</title>
 
   <style>
-    /* ----- ESTILOS GENERALES ----- */
+    /* ---------- ESTILOS GENERALES ---------- */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
       background: linear-gradient(135deg, #fdf6f0, #fcefee);
       color: #444;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
 
@@ -23,24 +20,24 @@
     }
 
     header img {
-      width: 120px;
+      width: 130px;
       height: auto;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-top: 10px;
-      color: #7b4b94; /* Lila suave */
+      color: #7b4b94; /* Lila */
     }
 
     p {
-      max-width: 600px;
+      max-width: 650px;
       margin: 10px auto 20px;
       font-size: 1.1rem;
       line-height: 1.6;
     }
 
-    /* ----- BOTÓN DE CONTACTO ----- */
+    /* ---------- BOTÓN DE CONTACTO ---------- */
     .boton-contacto {
       background-color: #e6b800; /* Dorado */
       color: white;
@@ -57,7 +54,7 @@
       transform: scale(1.05);
     }
 
-    /* ----- SECCIÓN DE PRODUCTOS ----- */
+    /* ---------- SECCIÓN PRODUCTOS ---------- */
     .productos {
       display: flex;
       flex-wrap: wrap;
@@ -71,7 +68,7 @@
       background: white;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 250px;
+      width: 260px;
       padding: 20px;
       transition: transform 0.3s;
     }
@@ -90,14 +87,44 @@
       margin: 10px 0 5px;
     }
 
-    /* ----- PIE DE PÁGINA ----- */
+    /* ---------- CONTACTO ---------- */
+    .contacto {
+      background-color: #fff;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .contacto h2 {
+      color: #7b4b94;
+      margin-bottom: 10px;
+    }
+
+    .contacto p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #e6b800;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #c39b00;
+    }
+
+    /* ---------- PIE DE PÁGINA ---------- */
     footer {
       margin: 40px 0 20px;
       font-size: 0.9rem;
       color: #777;
     }
 
-    /* ----- ADAPTACIÓN A CELULARES ----- */
+    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
@@ -112,20 +139,15 @@
 
 <body>
   <header>
-    <!-- Aquí irá el logo generado -->
+    <!-- LOGO -->
     <img src="logo-cottage.png" alt="Logo Cottage Acogedor">
     <h1>Cottage Acogedor</h1>
     <p>Un rincón lleno de encanto donde encontrarás productos hechos con amor para tu hogar.</p>
-    <button class="boton-contacto">Contáctanos</button>
+    <button class="boton-contacto" onclick="window.location.href='#contacto'">Contáctanos</button>
   </header>
 
+  <!-- SECCIÓN DE PRODUCTOS -->
   <section class="productos">
-    <div class="producto">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Decoración artesanal">
-      <h3>Decoración artesanal</h3>
-      <p>Detalles únicos para hacer tu casa más acogedora.</p>
-    </div>
-
     <div class="producto">
       <img src="https://images.unsplash.com/photo-1602526216037-b3c95ff04b32" alt="Velas aromáticas">
       <h3>Velas aromáticas</h3>
@@ -137,6 +159,14 @@
       <h3>Cojines decorativos</h3>
       <p>Texturas y colores que llenan de vida tu espacio.</p>
     </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573026334176" target="_blank">+57 302 633 4176</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/cottageacogedor" target="_blank">@cottageacogedor</a></p>
+    <p>¡Estamos felices de ayudarte a crear un hogar acogedor!</p>
   </section>
 
   <footer>
