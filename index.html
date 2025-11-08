@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cottage Acogedor</title>
 
-  <!-- Estilos CSS internos -->
+  <!-- Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
   <style>
     /* ----- Estilos generales ----- */
     body {
@@ -14,6 +16,7 @@
       color: #3b2f2f;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     /* ----- Encabezado ----- */
@@ -24,26 +27,27 @@
       padding: 20px 40px;
       background-color: #f5e4d0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    /* Contenedor del logo y título */
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    /* Imagen del logo */
     .logo img {
       width: 60px;
       height: 60px;
       border-radius: 8px;
     }
 
-    /* Texto del logo */
     .logo h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-family: "Dancing Script", cursive;
+      font-size: 1.8rem;
+      font-weight: 600;
       color: #533c2d;
       margin: 0;
     }
@@ -64,11 +68,13 @@
     /* ----- Sección principal (hero) ----- */
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
+      background: url("fondo-cottage.jpg") center/cover no-repeat;
+      color: #3b2f2f;
     }
 
     .hero h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 10px;
     }
 
@@ -78,7 +84,6 @@
       margin-bottom: 25px;
     }
 
-    /* ----- Botón principal ----- */
     .btn {
       display: inline-block;
       padding: 12px 30px;
@@ -87,11 +92,73 @@
       text-decoration: none;
       border-radius: 30px;
       font-weight: 600;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .btn:hover {
       background-color: #b86b45;
+      transform: scale(1.05);
+    }
+
+    /* ----- Sección "Nosotros" ----- */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #about h2, #products h2, #contact h2 {
+      color: #533c2d;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    #about p {
+      color: #5a4634;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* ----- Sección "Productos" ----- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background-color: #f5e4d0;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      margin: 0;
+      color: #533c2d;
+    }
+
+    /* ----- Sección "Contacto" ----- */
+    .contact-info {
+      margin-top: 30px;
+      color: #5a4634;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
     }
 
     /* ----- Pie de página ----- */
@@ -100,6 +167,7 @@
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
+      color: #3b2f2f;
     }
 
     /* ----- Adaptabilidad móvil ----- */
@@ -121,15 +189,13 @@
 </head>
 
 <body>
-  <!-- Encabezado con logo y menú -->
+  <!-- Encabezado -->
   <header class="header">
     <div class="logo">
-      <!-- Aquí se muestra el logo -->
       <img src="logo-cottage.png" alt="Logo Cottage Acogedor" />
       <h1>Cottage Acogedor</h1>
     </div>
 
-    <!-- Menú de navegación -->
     <nav>
       <a href="#about">Nosotros</a>
       <a href="#products">Productos</a>
@@ -143,6 +209,45 @@
     <p>Artesanías, decoración y regalos que llenan tu hogar de calidez.</p>
     <a href="#products" class="btn">Explorar ahora</a>
   </main>
+
+  <!-- Sección Nosotros -->
+  <section id="about">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>Cottage Acogedor</strong> creemos en la belleza de lo hecho a mano. Cada pieza está diseñada con dedicación, inspirada en la naturaleza y creada para aportar calidez a cada rincón de tu hogar.</p>
+  </section>
+
+  <!-- Sección Productos -->
+  <section id="products">
+    <h2>Nuestros Productos</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="producto1.jpg" alt="Vela artesanal en frasco de vidrio" />
+        <h3>Vela artesanal</h3>
+        <p>Aroma a vainilla y madera.</p>
+      </div>
+      <div class="product-card">
+        <img src="producto2.jpg" alt="Maceta de cerámica pintada a mano" />
+        <h3>Maceta decorativa</h3>
+        <p>Pintada a mano con diseños florales.</p>
+      </div>
+      <div class="product-card">
+        <img src="producto3.jpg" alt="Cojín bordado artesanalmente" />
+        <h3>Cojín bordado</h3>
+        <p>Hecho con lino natural y bordado a mano.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contact">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas o quieres hacer un pedido personalizado?</p>
+    <div class="contact-info">
+      <p>📧 Email: contacto@cottageacogedor.com</p>
+      <p>📞 Teléfono: +34 600 123 456</p>
+      <p>📍 Ubicación: Madrid, España</p>
+    </div>
+  </section>
 
   <!-- Pie de página -->
   <footer>
