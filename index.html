@@ -4,15 +4,132 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cottage Acogedor</title>
-  <!-- Vinculamos el archivo CSS -->
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Estilos CSS internos -->
+  <style>
+    /* ----- Estilos generales ----- */
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fff8ef;
+      color: #3b2f2f;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ----- Encabezado ----- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #f5e4d0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .logo h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #533c2d;
+    }
+
+    /* ----- Navegación ----- */
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #533c2d;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b86b45;
+    }
+
+    /* ----- Sección principal (hero) ----- */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #5a4634;
+      margin-bottom: 25px;
+    }
+
+    /* ----- Botón principal ----- */
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #d9a273;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b86b45;
+    }
+
+    /* ----- Imagen decorativa ----- */
+    .hero-img {
+      width: 220px;
+      margin-top: 40px;
+    }
+
+    /* ----- Pie de página ----- */
+    footer {
+      background-color: #f5e4d0;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* ----- Adaptabilidad móvil ----- */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+
+      .hero-img {
+        width: 180px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Encabezado con el logo y menú -->
+  <!-- Encabezado con logo y menú -->
   <header class="header">
     <div class="logo">
-      <!-- Puedes reemplazar esta ruta con el logo que te envié -->
+      <!-- Reemplaza con tu imagen del logo -->
       <img src="logo-cottage.png" alt="Logo Cottage Acogedor" />
       <h1>Cottage Acogedor</h1>
     </div>
@@ -29,7 +146,7 @@
     <p>Artesanías, decoración y regalos que llenan tu hogar de calidez.</p>
     <a href="#products" class="btn">Explorar ahora</a>
 
-    <!-- Imagen decorativa de casa -->
+    <!-- Imagen decorativa -->
     <img src="cottage-ilustracion.png" alt="Ilustración de casa acogedora" class="hero-img" />
   </main>
 
