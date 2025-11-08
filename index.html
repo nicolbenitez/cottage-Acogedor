@@ -26,12 +26,21 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
+    /* Contenedor del logo y título */
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
+    /* Imagen del logo */
+    .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+    }
+
+    /* Texto del logo */
     .logo h1 {
       font-size: 1.6rem;
       font-weight: 700;
@@ -112,11 +121,15 @@
 </head>
 
 <body>
-  <!-- Encabezado con título y menú -->
+  <!-- Encabezado con logo y menú -->
   <header class="header">
     <div class="logo">
+      <!-- Aquí se muestra el logo -->
+      <img src="logo-cottage.png" alt="Logo Cottage Acogedor" />
       <h1>Cottage Acogedor</h1>
     </div>
+
+    <!-- Menú de navegación -->
     <nav>
       <a href="#about">Nosotros</a>
       <a href="#products">Productos</a>
